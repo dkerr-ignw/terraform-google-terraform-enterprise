@@ -25,6 +25,7 @@ module "object_storage" {
 
   count = local.enable_object_storage_module ? 1 : 0
 
+  project_id = module.project_factory_project_services.project_id
   namespace       = var.namespace
   labels          = var.labels
   service_account = module.service_accounts.service_account
@@ -69,6 +70,8 @@ module "database" {
 
   count = local.enable_database_module ? 1 : 0
 
+  project_id = module.project_factory_project_services.project_id
+
   dbname                        = var.database_name
   username                      = var.database_user
   machine_type                  = var.database_machine_type
@@ -89,6 +92,8 @@ module "redis" {
   source = "./modules/redis"
 
   count = local.enable_redis_module ? 1 : 0
+
+  project_id = module.project_factory_project_services.project_id
 
   auth_enabled                  = var.redis_auth_enabled
   namespace                     = var.namespace
