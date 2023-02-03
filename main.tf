@@ -329,6 +329,7 @@ module "load_balancer" {
   count  = var.load_balancer == "PUBLIC" ? 1 : 0
   source = "./modules/load_balancer"
 
+  project_id = module.project_factory_project_services.project_id
   labels               = var.labels
   namespace            = var.namespace
   fqdn                 = local.full_fqdn
