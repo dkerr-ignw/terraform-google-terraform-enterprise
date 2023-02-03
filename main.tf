@@ -241,7 +241,7 @@ module "vm_mig" {
   instance_template = module.vm_instance_template.self_link
   region            = null
 
-  project_id = module.project_factory_project_services.id
+  project_id = module.project_factory_project_services.project_id
   health_check = {
     check_interval_sec  = 60
     healthy_threshold   = 2
