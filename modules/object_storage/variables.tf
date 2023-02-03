@@ -17,3 +17,7 @@ variable "service_account" {
     email = string
   })
 }
+
+variable "project_id" {
+  type = string
+}
