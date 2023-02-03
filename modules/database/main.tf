@@ -8,6 +8,7 @@ resource "random_pet" "postgres" {
 resource "google_sql_database_instance" "tfe" {
   name             = "${var.namespace}-tfe-${random_pet.postgres.id}"
   database_version = var.postgres_version
+  project          = var.project_id
 
   settings {
     tier              = var.machine_type

@@ -17,6 +17,7 @@ resource "google_compute_health_check" "lb" {
   check_interval_sec = 30
   description        = "The health check of the public load balancer for TFE."
   timeout_sec        = 4
+  project            = var.project_id
 
   https_health_check {
     port         = 443

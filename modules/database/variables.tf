@@ -52,3 +52,7 @@ variable "service_networking_connection" {
     network = string
   })
 }
+
+variable "project_id" {
+  type = string
+}

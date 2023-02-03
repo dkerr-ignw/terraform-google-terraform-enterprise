@@ -29,3 +29,7 @@ variable "labels" {
   type        = map(string)
   description = "Labels to apply to resources"
 }
+
+variable "project_id" {
+  type = string
+}

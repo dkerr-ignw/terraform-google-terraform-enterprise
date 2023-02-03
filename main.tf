@@ -25,7 +25,7 @@ module "object_storage" {
 
   count = local.enable_object_storage_module ? 1 : 0
 
-  project_id = module.project_factory_project_services.project_id
+  project_id      = module.project_factory_project_services.project_id
   namespace       = var.namespace
   labels          = var.labels
   service_account = module.service_accounts.service_account

@@ -42,3 +42,7 @@ variable "dns_create_record" {
   description = "A toggle to control the creation of a DNS record for the load balancer IP address."
   type        = bool
 }
+
+variable "project_id" {
+  type = string
+}
